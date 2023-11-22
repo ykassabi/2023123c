@@ -1,9 +1,9 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="EN">
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>123C</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -24,514 +24,1388 @@
 
   <meta name="theme-color" content="#fafafa">
 
+
 </head>
 
 <body>
 
 
+<div class="bg-gray-200">
+  <!-- Header -->
+  <header x-data="{ open: false }" @keydown.window.escape="open = true" class="absolute inset-x-0 top-0 z-50">
+    <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+      <div class="flex lg:flex-1">
+        <a href="#" class="-m-1.5 p-1.5">
+          <span class="sr-only">123C</span>
+          <img class="h-24 w-auto" src="https://123c-blog.s3-ca-central-1.amazonaws.com/logo.png" alt="logo 123c">
+        </a>
+      </div>
+      <div class="flex lg:hidden">
+        <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                @click="open = true">
+          <span class="sr-only">Open main menu</span>
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+               aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="hidden lg:flex lg:gap-x-12">
+        <a href="#" class="text-sm font-semibold leading-6 text-red-900">Product</a>
+        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Features</a>
+        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Marketplace</a>
+        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Company</a>
 
-  <div class="bg-gray-200">
-    <!-- Header -->
-    <header x-data="{ open: false }" @keydown.window.escape="open = false" class="absolute inset-x-0 top-0 z-50">
-      <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-        <div class="flex lg:flex-1">
+      </div>
+      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">→</span></a>
+      </div>
+    </nav>
+    <div x-description="Mobile menu, show/hide based on menu open state." class="lg:hidden" x-ref="dialog" x-show="open"
+         aria-modal="true">
+      <div x-description="Background backdrop, show/hide based on slide-over state." class="fixed inset-0 z-50"></div>
+      <div
+        class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+        @click.away="open = false">
+        <div class="flex items-center justify-between">
           <a href="#" class="-m-1.5 p-1.5">
-            <span class="sr-only">Your Company</span>
-            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&amp;shade=600" alt="">
+            <span class="sr-only">123C</span>
+            <img class="h-24 w-auto" src="https://123c-blog.s3-ca-central-1.amazonaws.com/logo.png" alt="logo 123c">
+
           </a>
-        </div>
-        <div class="flex lg:hidden">
-          <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700" @click="open = true">
-            <span class="sr-only">Open main menu</span>
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+          <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="open = false">
+            <span class="sr-only">Close menu</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                 aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
           </button>
         </div>
-        <div class="hidden lg:flex lg:gap-x-12">
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Product</a>
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Features</a>
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Marketplace</a>
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Company</a>
+        <div class="mt-6 flow-root">
+          <div class="-my-6 divide-y divide-gray-500/10">
+            <div class="space-y-2 py-6">
+              <a href="#"
+                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Product</a>
+              <a href="#"
+                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Features</a>
+              <a href="#"
+                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Marketplace</a>
+              <a href="#"
+                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Company</a>
 
-        </div>
-        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">→</span></a>
-        </div>
-      </nav>
-      <div x-description="Mobile menu, show/hide based on menu open state." class="lg:hidden" x-ref="dialog" x-show="open" aria-modal="true">
-        <div x-description="Background backdrop, show/hide based on slide-over state." class="fixed inset-0 z-50"></div>
-        <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10" @click.away="open = false">
-          <div class="flex items-center justify-between">
-            <a href="#" class="-m-1.5 p-1.5">
-              <span class="sr-only">Your Company</span>
-              <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&amp;shade=600" alt="">
-            </a>
-            <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="open = false">
-              <span class="sr-only">Close menu</span>
-              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-              </svg>
-            </button>
-          </div>
-          <div class="mt-6 flow-root">
-            <div class="-my-6 divide-y divide-gray-500/10">
-              <div class="space-y-2 py-6">
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Product</a>
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Features</a>
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Marketplace</a>
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Company</a>
-
-              </div>
-              <div class="py-6">
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
-              </div>
             </div>
+            <!--            <div class="py-6">-->
+            <!--              <a href="#"-->
+            <!--                 class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>-->
+            <!--            </div>-->
           </div>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main class="isolate">
-      <!-- Hero section -->
-      <div class="relative pt-14">
-        <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
-          <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-        </div>
-        <div class="py-24 sm:py-32">
-          <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            <div class="mx-auto max-w-2xl text-center">
-              <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Deploy to the cloud with confidence</h1>
-              <p class="mt-6 text-lg leading-8 text-gray-600">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
-              <div class="mt-10 flex items-center justify-center gap-x-6">
-                <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get started</a>
-                <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Learn more <span aria-hidden="true">→</span></a>
-              </div>
-            </div>
-            <div class="mt-16 flow-root sm:mt-24">
-              <div class="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
-                <img src="https://tailwindui.com/img/component-images/project-app-screenshot.png" alt="App screenshot" width="2432" height="1442" class="rounded-md shadow-2xl ring-1 ring-gray-900/10">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
-          <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-        </div>
+
+  <!--/////////////////////    END OF MENU-->
+
+  <div
+    class="h-full w-full bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100">
+    <!-- Hero section -->
+    <div class="relative pt-14">
+      <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+           aria-hidden="true">
+        <div
+          class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+          style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
       </div>
 
-      <!-- Logo cloud -->
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="mx-auto grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-12 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-          <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg" alt="Transistor" width="158" height="48">
-          <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg" alt="Reform" width="158" height="48">
-          <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg" alt="Tuple" width="158" height="48">
-          <img class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg" alt="SavvyCal" width="158" height="48">
-          <img class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg" alt="Statamic" width="158" height="48">
-        </div>
-        <div class="mt-16 flex justify-center">
-          <p class="relative rounded-full px-4 py-1.5 text-sm leading-6 text-gray-600 ring-1 ring-inset ring-gray-900/10 hover:ring-gray-900/20">
-            <span class="hidden md:inline">Transistor saves up to $40,000 per year, per employee by working with us.</span>
-            <a href="#" class="font-semibold text-indigo-600"><span class="absolute inset-0" aria-hidden="true"></span> Read our case study <span aria-hidden="true">→</span></a>
-          </p>
-        </div>
-      </div>
-
-      <!-- Feature section -->
-      <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-56 lg:px-8">
-        <div class="mx-auto max-w-2xl lg:text-center">
-          <h2 class="text-base font-semibold leading-7 text-indigo-600">Deploy faster</h2>
-          <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Everything you need to deploy your app</p>
-          <p class="mt-6 text-lg leading-8 text-gray-600">Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum pulvinar et feugiat blandit at. In mi viverra elit nunc.</p>
-        </div>
-        <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-          <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-            <div class="relative pl-16">
-              <dt class="text-base font-semibold leading-7 text-gray-900">
-                <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                  <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z"></path>
-                  </svg>
-                </div>
-                Push to deploy
-              </dt>
-              <dd class="mt-2 text-base leading-7 text-gray-600">Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.</dd>
-            </div>
-            <div class="relative pl-16">
-              <dt class="text-base font-semibold leading-7 text-gray-900">
-                <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                  <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"></path>
-                  </svg>
-                </div>
-                SSL certificates
-              </dt>
-              <dd class="mt-2 text-base leading-7 text-gray-600">Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.</dd>
-            </div>
-            <div class="relative pl-16">
-              <dt class="text-base font-semibold leading-7 text-gray-900">
-                <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                  <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"></path>
-                  </svg>
-                </div>
-                Simple queues
-              </dt>
-              <dd class="mt-2 text-base leading-7 text-gray-600">Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.</dd>
-            </div>
-            <div class="relative pl-16">
-              <dt class="text-base font-semibold leading-7 text-gray-900">
-                <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                  <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M7.864 4.243A7.5 7.5 0 0119.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 004.5 10.5a7.464 7.464 0 01-1.15 3.993m1.989 3.559A11.209 11.209 0 008.25 10.5a3.75 3.75 0 117.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 01-3.6 9.75m6.633-4.596a18.666 18.666 0 01-2.485 5.33"></path>
-                  </svg>
-                </div>
-                Advanced security
-              </dt>
-              <dd class="mt-2 text-base leading-7 text-gray-600">Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.</dd>
-            </div>
-
-          </dl>
-        </div>
-      </div>
-
-      <!-- Testimonial section -->
-      <div class="mx-auto mt-32 max-w-7xl sm:mt-56 sm:px-6 lg:px-8">
-        <div class="relative overflow-hidden bg-gray-900 px-6 py-20 shadow-xl sm:rounded-3xl sm:px-10 sm:py-24 md:px-12 lg:px-20">
-          <img class="absolute inset-0 h-full w-full object-cover brightness-150 saturate-0" src="https://images.unsplash.com/photo-1601381718415-a05fb0a261f3?ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8ODl8fHxlbnwwfHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1216&amp;q=80" alt="">
-          <div class="absolute inset-0 bg-gray-900/90 mix-blend-multiply"></div>
-          <div class="absolute -left-80 -top-56 transform-gpu blur-3xl" aria-hidden="true">
-            <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-r from-[#ff4694] to-[#776fff] opacity-[0.45]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-          </div>
-          <div class="hidden md:absolute md:bottom-16 md:left-[50rem] md:block md:transform-gpu md:blur-3xl" aria-hidden="true">
-            <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-r from-[#ff4694] to-[#776fff] opacity-25" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-          </div>
-          <div class="relative mx-auto max-w-2xl lg:mx-0">
-            <img class="h-12 w-auto" src="https://tailwindui.com/img/logos/workcation-logo-white.svg" alt="">
-            <figure>
-              <blockquote class="mt-6 text-lg font-semibold text-white sm:text-xl sm:leading-8">
-                <p>“Amet amet eget scelerisque tellus sit neque faucibus non eleifend. Integer eu praesent at a. Ornare arcu gravida natoque erat et cursus tortor consequat at. Vulputate gravida sociis enim nullam ultricies habitant malesuada lorem ac.”</p>
-              </blockquote>
-              <figcaption class="mt-6 text-base text-white">
-                <div class="font-semibold">Judith Black</div>
-                <div class="mt-1">CEO of Tuple</div>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-      </div>
-
-      <!-- Pricing section -->
-      <div class="py-24 sm:pt-48">
+      <div class="py-24 sm:py-32">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="mx-auto max-w-4xl text-center">
-            <h2 class="text-base font-semibold leading-7 text-indigo-600">Pricing</h2>
-            <p class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">Pricing plans for teams of&nbsp;all&nbsp;sizes</p>
+          <div class="mx-auto max-w-2xl text-center">
+            <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Digital Success Starts Here. Elevate
+              Your Small Business Today.</h1>
+            <p class="mt-6 text-lg leading-8 text-gray-600 text-justify">
+              At 123C, we are dedicated to helping small businesses in Canada boost their digital presence.</p>
+            <div class="mt-10 flex items-center justify-center gap-x-6">
+              <a href="#"
+                 class="rounded-md bg-red-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">123Commence</a>
+              <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Learn more <span
+                aria-hidden="true">→</span></a>
+            </div>
           </div>
-          <p class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600">Distinctio et nulla eum soluta et neque labore quibusdam. Saepe et quasi iusto modi velit ut non voluptas in. Explicabo id ut laborum.</p>
-          <div class="isolate mx-auto mt-16 grid max-w-md grid-cols-1 gap-y-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-            <div class="flex flex-col justify-between rounded-3xl bg-white p-8 ring-1 ring-gray-200 xl:p-10 lg:mt-8 lg:rounded-r-none ">
-              <div>
-                <div class="flex items-center justify-between gap-x-4">
-                  <h3 id="tier-freelancer" class="text-lg font-semibold leading-8 text-gray-900">Freelancer</h3>
-                </div>
-                <p class="mt-4 text-sm leading-6 text-gray-600">The essentials to provide your best work for clients.</p>
-                <p class="mt-6 flex items-baseline gap-x-1">
-                  <span class="text-4xl font-bold tracking-tight text-gray-900">$24</span>
-                  <span class="text-sm font-semibold leading-6 text-gray-600">/month</span>
-                </p>
-                <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-gray-600">
-                  <li class="flex gap-x-3">
-                    <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                      <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
-                    </svg>
-                    5 products
-                  </li>
-                  <li class="flex gap-x-3">
-                    <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                      <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
-                    </svg>
-                    Up to 1,000 subscribers
-                  </li>
-                  <li class="flex gap-x-3">
-                    <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                      <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
-                    </svg>
-                    Basic analytics
-                  </li>
-                  <li class="flex gap-x-3">
-                    <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                      <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
-                    </svg>
-                    48-hour support response time
-                  </li>
 
-                </ul>
-              </div>
-              <a href="#" aria-describedby="tier-freelancer" class="mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 text-indigo-600 ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300">Buy plan</a>
+          <div class="backdrop-blur-xl bg-white/30 rounded-md py-12 m-20">
+            <div class="mx-auto max-w-lg px-6">
+
+              <ul role="list" class="space-y-6">
+                <li class="relative flex gap-x-4">
+                  <div class="absolute left-0 top-0 flex w-6 justify-center -bottom-6">
+                    <div class="w-px bg-gray-200"></div>
+                  </div>
+                  <div class="relative flex h-6 w-6 flex-none items-center justify-center bg- white">
+                    <div class="h-1.5 w-1.5 rounded-full bg-red-100 ring-1 ring-gray-300"></div>
+                  </div>
+                  <p class="flex-auto py-0.5 text-xs leading-5 text-gray-500"><span class="font-medium text-gray-900">123 Commence</span>
+                    in 3 easy steps.</p>
+                  <time datetime="2023-01-23T10:32" class="flex-none py-0.5 text-xs leading-5 text-gray-500"></time>
+                </li>
+
+                <li class="relative flex gap-x-4 ">
+                  <div class="absolute left-0 top-0 flex w-6 justify-center -bottom-6">
+                    <div class="w-px bg-gray-200"></div>
+                  </div>
+                  <p class="p-2 bg-red-300 rounded-md flex-none relative text-gray-700 shadow-xl"> 1 </p>
+                  <div class="flex-auto rounded-md p-3 ring-1 ring-inset ring-gray-200 bg-red-50 shadow-xl">
+                    <div class="flex justify-between gap-x-4">
+                      <div class="py-0.5 text-xs leading-5 text-gray-500"><span class="font-medium text-gray-900">Discovery and Planning:</span>
+                        Objectives
+                      </div>
+                      <time datetime="2023-01-23T15:56" class="flex-none py-0.5 text-xs leading-5 text-gray-500"></time>
+                    </div>
+                    <p class="text-sm leading-6 text-gray-500">Scope and Requirements - Proposal and Agreement .</p>
+                  </div>
+                </li>
+                <li class="relative flex gap-x-4">
+                  <div class="absolute left-0 top-0 flex w-6 justify-center -bottom-6">
+                    <div class="w-px bg-gray-200"></div>
+                  </div>
+                  <p class="p-2 bg-red-500 rounded-md flex-none relative text-gray-50 shadow-xl"> 2 </p>
+                  <div class="flex-auto rounded-md p-3 ring-1 ring-inset ring-gray-200 bg-red-100 shadow-xl">
+                    <div class="flex justify-between gap-x-4">
+                      <div class="py-0.5 text-xs leading-5 text-gray-500"><span class="font-medium text-gray-900">Design and Development</span>
+                        Coding
+                      </div>
+                      <time datetime="2023-01-23T15:56" class="flex-none py-0.5 text-xs leading-5 text-gray-500"></time>
+                    </div>
+                    <p class="text-sm leading-6 text-gray-500">Development - Integration - Testing.</p>
+                  </div>
+                </li>
+                <li class="relative flex gap-x-4">
+                  <div class="absolute left-0 top-0 flex w-6 justify-center -bottom-6">
+                    <div class="w-px bg-gray-200"></div>
+                  </div>
+                  <p class="p-2 bg-red-700 rounded-md flex-none relative text-gray-50 shadow-xl"> 3 </p>
+                  <div class="flex-auto rounded-md p-3 ring-1 ring-inset ring-gray-200 bg-red-200 shadow-xl">
+                    <div class="flex justify-between gap-x-4">
+                      <div class="py-0.5 text-xs leading-5 text-gray-500"><span
+                        class="font-medium text-gray-900">Launch </span> Finalisation
+                      </div>
+                      <time datetime="2023-01-23T15:56" class="flex-none py-0.5 text-xs leading-5 text-gray-500"></time>
+                    </div>
+                    <p class="text-sm leading-6 text-gray-500">Launch - Feedback and Evaluation.</p>
+                  </div>
+                </li>
+
+                <li class="relative flex gap-x-4">
+                  <div class="absolute left-0 top-0 flex w-6 justify-center h-6">
+                    <div class="w-px bg-gray-200"></div>
+                  </div>
+                  <div class="relative flex h-6 w-6 flex-none items-center justify-center ">
+                    <svg class="h-6 w-6 text-green-600" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd"
+                            d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <p class="flex-auto py-0.5 text-xs leading-5 text-gray-500"><span class="font-medium text-gray-900">Done </span>
+                    with satisfaction.</p>
+                  <time datetime="2023-01-24T09:20" class="flex-none py-0.5 text-xs leading-5 text-gray-500"></time>
+                </li>
+
+              </ul>
+
+
             </div>
-            <div class="flex flex-col justify-between rounded-3xl bg-white p-8 ring-1 ring-gray-200 xl:p-10 lg:z-10 lg:rounded-b-none  ">
-              <div>
-                <div class="flex items-center justify-between gap-x-4">
-                  <h3 id="tier-startup" class="text-lg font-semibold leading-8 text-indigo-600">Startup</h3>
-                  <p class="rounded-full bg-indigo-600/10 px-2.5 py-1 text-xs font-semibold leading-5 text-indigo-600">Most popular</p>
-                </div>
-                <p class="mt-4 text-sm leading-6 text-gray-600">A plan that scales with your rapidly growing business.</p>
-                <p class="mt-6 flex items-baseline gap-x-1">
-                  <span class="text-4xl font-bold tracking-tight text-gray-900">$32</span>
-                  <span class="text-sm font-semibold leading-6 text-gray-600">/month</span>
-                </p>
-                <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-gray-600">
-                  <li class="flex gap-x-3">
-                    <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                      <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
-                    </svg>
-                    25 products
-                  </li>
-                  <li class="flex gap-x-3">
-                    <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                      <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
-                    </svg>
-                    Up to 10,000 subscribers
-                  </li>
-                  <li class="flex gap-x-3">
-                    <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                      <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
-                    </svg>
-                    Advanced analytics
-                  </li>
-                  <li class="flex gap-x-3">
-                    <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                      <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
-                    </svg>
-                    24-hour support response time
-                  </li>
-                  <li class="flex gap-x-3">
-                    <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                      <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
-                    </svg>
-                    Marketing automations
-                  </li>
+          </div>
 
-                </ul>
-              </div>
-              <a href="#" aria-describedby="tier-startup" class="mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 bg-indigo-600 text-white shadow-sm hover:bg-indigo-500">Buy plan</a>
+
+          <div class="mt-16 flow-root sm:mt-24">
+            <div
+              class="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
+              <img src="https://tailwindui.com/img/component-images/project-app-screenshot.png" alt="App screenshot"
+                   width="2432" height="1442" class="rounded-md shadow-2xl ring-1 ring-gray-900/10">
             </div>
-            <div class="flex flex-col justify-between rounded-3xl bg-white p-8 ring-1 ring-gray-200 xl:p-10 lg:mt-8  lg:rounded-l-none">
-              <div>
-                <div class="flex items-center justify-between gap-x-4">
-                  <h3 id="tier-enterprise" class="text-lg font-semibold leading-8 text-gray-900">Enterprise</h3>
-                </div>
-                <p class="mt-4 text-sm leading-6 text-gray-600">Dedicated support and infrastructure for your company.</p>
-                <p class="mt-6 flex items-baseline gap-x-1">
-                  <span class="text-4xl font-bold tracking-tight text-gray-900">$48</span>
-                  <span class="text-sm font-semibold leading-6 text-gray-600">/month</span>
-                </p>
-                <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-gray-600">
-                  <li class="flex gap-x-3">
-                    <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                      <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
-                    </svg>
-                    Unlimited products
-                  </li>
-                  <li class="flex gap-x-3">
-                    <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                      <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
-                    </svg>
-                    Unlimited subscribers
-                  </li>
-                  <li class="flex gap-x-3">
-                    <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                      <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
-                    </svg>
-                    Advanced analytics
-                  </li>
-                  <li class="flex gap-x-3">
-                    <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                      <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
-                    </svg>
-                    1-hour, dedicated support response time
-                  </li>
-                  <li class="flex gap-x-3">
-                    <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                      <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
-                    </svg>
-                    Marketing automations
-                  </li>
-
-                </ul>
-              </div>
-              <a href="#" aria-describedby="tier-enterprise" class="mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 text-indigo-600 ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300">Buy plan</a>
-            </div>
-
           </div>
         </div>
       </div>
+      <div
+        class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+        aria-hidden="true">
+        <div
+          class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+          style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+      </div>
+    </div>
 
-      <!-- FAQs -->
-      <div class="mx-auto max-w-2xl divide-y divide-gray-900/10 px-6 pb-8 sm:pb-24 sm:pt-12 lg:max-w-7xl lg:px-8 lg:pb-32">
-        <h2 class="text-2xl font-bold leading-10 tracking-tight text-gray-900">Frequently asked questions</h2>
-        <dl class="mt-10 space-y-8 divide-y divide-gray-900/10">
-          <div class="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
-            <dt class="text-base font-semibold leading-7 text-gray-900 lg:col-span-5">What's the best thing about Switzerland?</dt>
-            <dd class="mt-4 lg:col-span-7 lg:mt-0">
-              <p class="text-base leading-7 text-gray-600">I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.</p>
+
+    <!-- Logo cloud -->
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div
+        class="mx-auto grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-12 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+        <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+             src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg" alt="Transistor" width="158"
+             height="48">
+        <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+             src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg" alt="Reform" width="158"
+             height="48">
+        <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+             src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg" alt="Tuple" width="158" height="48">
+        <img class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
+             src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg" alt="SavvyCal" width="158"
+             height="48">
+        <img class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
+             src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg" alt="Statamic" width="158"
+             height="48">
+      </div>
+      <div class="mt-16 flex justify-center">
+        <p
+          class="relative rounded-full px-4 py-1.5 text-sm leading-6 text-gray-600 ring-1 ring-inset ring-gray-900/10 hover:ring-gray-900/20">
+          <span
+            class="hidden md:inline">Transistor saves up to $40,000 per year, per employee by working with us.</span>
+          <a href="#" class="font-semibold text-red-600"><span class="absolute inset-0" aria-hidden="true"></span>
+            Read our case study <span aria-hidden="true">→</span></a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Feature section -->
+    <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-56 lg:px-8 pb-16">
+      <div class="mx-auto max-w-2xl lg:text-center">
+        <h2 class="text-base font-semibold leading-7 text-red-600">Commence faster</h2>
+        <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-justify">Everything you need to
+          GROW your business </p>
+        <p class="mt-6 text-lg leading-8 text-gray-600 text-justify">
+          We understand the importance of a strong online presence in today's competitive market, which is why we offer
+          a range of services designed to help businesses succeed. From developing websites that are visually
+          appealing and user-friendly to managing social media accounts to engage with customers, we are here to
+          make sure your business stands out. Our goal is to help you attract more customers and improve the quality
+          of your service through our high-quality services. Trust 123c to elevate your small business to new
+          heights in the digital world. </p>
+      </div>
+      <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+        <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+          <div class="relative pl-16">
+            <dt class="text-base font-semibold leading-7 text-gray-900">
+              <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-red-600">
+                <svg class="h-8 w-8 text-red" fill="#fff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M9.83824 18.4467C10.0103 18.7692 10.1826 19.0598 10.3473 19.3173C8.59745 18.9238 7.07906 17.9187 6.02838 16.5383C6.72181 16.1478 7.60995 15.743 8.67766 15.4468C8.98112 16.637 9.40924 17.6423 9.83824 18.4467ZM11.1618 17.7408C10.7891 17.0421 10.4156 16.1695 10.1465 15.1356C10.7258 15.0496 11.3442 15 12.0001 15C12.6559 15 13.2743 15.0496 13.8535 15.1355C13.5844 16.1695 13.2109 17.0421 12.8382 17.7408C12.5394 18.3011 12.2417 18.7484 12 19.0757C11.7583 18.7484 11.4606 18.3011 11.1618 17.7408ZM9.75 12C9.75 12.5841 9.7893 13.1385 9.8586 13.6619C10.5269 13.5594 11.2414 13.5 12.0001 13.5C12.7587 13.5 13.4732 13.5593 14.1414 13.6619C14.2107 13.1384 14.25 12.5841 14.25 12C14.25 11.4159 14.2107 10.8616 14.1414 10.3381C13.4732 10.4406 12.7587 10.5 12.0001 10.5C11.2414 10.5 10.5269 10.4406 9.8586 10.3381C9.7893 10.8615 9.75 11.4159 9.75 12ZM8.38688 10.0288C8.29977 10.6478 8.25 11.3054 8.25 12C8.25 12.6946 8.29977 13.3522 8.38688 13.9712C7.11338 14.3131 6.05882 14.7952 5.24324 15.2591C4.76698 14.2736 4.5 13.168 4.5 12C4.5 10.832 4.76698 9.72644 5.24323 8.74088C6.05872 9.20472 7.1133 9.68686 8.38688 10.0288ZM10.1465 8.86445C10.7258 8.95042 11.3442 9 12.0001 9C12.6559 9 13.2743 8.95043 13.8535 8.86447C13.5844 7.83055 13.2109 6.95793 12.8382 6.2592C12.5394 5.69894 12.2417 5.25156 12 4.92432C11.7583 5.25156 11.4606 5.69894 11.1618 6.25918C10.7891 6.95791 10.4156 7.83053 10.1465 8.86445ZM15.6131 10.0289C15.7002 10.6479 15.75 11.3055 15.75 12C15.75 12.6946 15.7002 13.3521 15.6131 13.9711C16.8866 14.3131 17.9412 14.7952 18.7568 15.2591C19.233 14.2735 19.5 13.1679 19.5 12C19.5 10.8321 19.233 9.72647 18.7568 8.74093C17.9413 9.20477 16.8867 9.6869 15.6131 10.0289ZM17.9716 7.46178C17.2781 7.85231 16.39 8.25705 15.3224 8.55328C15.0189 7.36304 14.5908 6.35769 14.1618 5.55332C13.9897 5.23077 13.8174 4.94025 13.6527 4.6827C15.4026 5.07623 16.921 6.08136 17.9716 7.46178ZM8.67765 8.55325C7.61001 8.25701 6.7219 7.85227 6.02839 7.46173C7.07906 6.08134 8.59745 5.07623 10.3472 4.6827C10.1826 4.94025 10.0103 5.23076 9.83823 5.5533C9.40924 6.35767 8.98112 7.36301 8.67765 8.55325ZM15.3224 15.4467C15.0189 16.637 14.5908 17.6423 14.1618 18.4467C13.9897 18.7692 13.8174 19.0598 13.6527 19.3173C15.4026 18.9238 16.921 17.9186 17.9717 16.5382C17.2782 16.1477 16.3901 15.743 15.3224 15.4467ZM12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z"
+                        fill="#080341"/>
+                </svg>
+              </div>
+              WEB
+            </dt>
+            <dd class="mt-2 text-base leading-7 text-gray-600">
+              We develop modern and user-friendly websites that
+              showcase your brand and attract potential customers.
             </dd>
           </div>
-          <div class="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
-            <dt class="text-base font-semibold leading-7 text-gray-900 lg:col-span-5">How do you make holy water?</dt>
-            <dd class="mt-4 lg:col-span-7 lg:mt-0">
-              <p class="text-base leading-7 text-gray-600">You boil the hell out of it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aut tempora vitae odio inventore fuga aliquam nostrum quod porro. Delectus quia facere id sequi expedita natus.</p>
+          <div class="relative pl-16">
+            <dt class="text-base font-semibold leading-7 text-gray-900">
+              <div
+                class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-red-600 text-white">
+                <svg class="h-8 w-8 text-white" fill="#fff" version="1.1" id="Layer_1"
+                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                     viewBox="0 0 100 100" xml:space="preserve">
+<g id="Download_x5F_25_x25_">
+</g>
+                  <g id="Download_x5F_50_x25_">
+</g>
+                  <g id="Download_x5F_75_x25_">
+</g>
+                  <g id="Download_x5F_100_x25_">
+</g>
+                  <g id="Upload">
+</g>
+                  <g id="Next">
+</g>
+                  <g id="Last">
+</g>
+                  <g id="OK">
+</g>
+                  <g id="Fail">
+</g>
+                  <g id="Add">
+</g>
+                  <g id="Spinner_x5F_0_x25_">
+</g>
+                  <g id="Spinner_x5F_25_x25_">
+</g>
+                  <g id="Spinner_x5F_50_x25_">
+</g>
+                  <g id="Spinner_x5F_75_x25_">
+</g>
+                  <g id="Brightest_x5F_25_x25_">
+</g>
+                  <g id="Brightest_x5F_50_x25_">
+</g>
+                  <g id="Brightest_x5F_75_x25_">
+</g>
+                  <g id="Brightest_x5F_100_x25_">
+</g>
+                  <g id="Reload">
+</g>
+                  <g id="Forbidden">
+</g>
+                  <g id="Clock">
+</g>
+                  <g id="Compass">
+</g>
+                  <g id="World">
+</g>
+                  <g id="Speed">
+</g>
+                  <g id="Microphone">
+</g>
+                  <g id="Options">
+</g>
+                  <g id="Chronometer">
+</g>
+                  <g id="Lock">
+</g>
+                  <g id="User">
+</g>
+                  <g id="Position">
+</g>
+                  <g id="No_x5F_Signal">
+</g>
+                  <g id="Low_x5F_Signal">
+</g>
+                  <g id="Mid_x5F_Signal">
+</g>
+                  <g id="High_x5F_Signal">
+</g>
+                  <g id="Options_1_">
+</g>
+                  <g id="Flash">
+</g>
+                  <g id="No_x5F_Signal_x5F_02">
+</g>
+                  <g id="Low_x5F_Signal_x5F_02">
+</g>
+                  <g id="Mid_x5F_Signal_x5F_02">
+</g>
+                  <g id="High_x5F_Signal_x5F_02">
+</g>
+                  <g id="Favorite">
+</g>
+                  <g id="Search">
+</g>
+                  <g id="Stats_x5F_01">
+</g>
+                  <g id="Stats_x5F_02">
+</g>
+                  <g id="Turn_x5F_On_x5F_Off">
+</g>
+                  <g id="Full_x5F_Height">
+</g>
+                  <g id="Full_x5F_Width">
+</g>
+                  <g id="Full_x5F_Screen">
+</g>
+                  <g id="Compress_x5F_Screen">
+</g>
+                  <g id="Chat">
+</g>
+                  <g id="Bluetooth">
+</g>
+                  <g id="Share_x5F_iOS">
+</g>
+                  <g id="Share_x5F_Android">
+	<path fill="none" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"
+        stroke-miterlimit="10" d="
+		M50.016,73.188c-6.403,0-12.2-2.595-16.396-6.791C29.423,62.2,26.828,56.403,26.828,50c0-6.402,2.594-12.197,6.788-16.393
+		c4.196-4.198,9.995-6.795,16.399-6.795c12.806,0,23.188,10.381,23.188,23.188S62.822,73.188,50.016,73.188z"/>
+
+                    <circle fill="none" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-miterlimit="10" cx="40.188" cy="50" r="5"/>
+                    <path fill="none" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"
+                          stroke-miterlimit="10" d="
+		M49.188,40c0-2.761,2.239-5,5-5c2.761,0,5,2.239,5,5s-2.239,5-5,5c-1.553,0-2.941-0.708-3.858-1.82
+		C49.616,42.316,49.188,41.208,49.188,40z"/>
+
+                    <circle fill="none" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-miterlimit="10" cx="54.188" cy="60" r="5"/>
+
+                    <line fill="none" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"
+                          stroke-miterlimit="10" x1="44.169" y1="46.984" x2="50.016" y2="42.753"/>
+
+                    <line fill="none" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"
+                          stroke-miterlimit="10" x1="50.016" y1="56.984" x2="45.047" y2="53.631"/>
+</g>
+                  <g id="Love__x2F__Favorite">
+</g>
+                  <g id="Hamburguer">
+</g>
+                  <g id="Flying">
+</g>
+                  <g id="Take_x5F_Off">
+</g>
+                  <g id="Land">
+</g>
+                  <g id="City">
+</g>
+                  <g id="Nature">
+</g>
+                  <g id="Pointer">
+</g>
+                  <g id="Prize">
+</g>
+                  <g id="Extract">
+</g>
+                  <g id="Play">
+</g>
+                  <g id="Pause">
+</g>
+                  <g id="Stop">
+</g>
+                  <g id="Forward">
+</g>
+                  <g id="Reverse">
+</g>
+                  <g id="Next_1_">
+</g>
+                  <g id="Last_1_">
+</g>
+                  <g id="Empty_x5F_Basket">
+</g>
+                  <g id="Add_x5F_Basket">
+</g>
+                  <g id="Delete_x5F_Basket">
+</g>
+                  <g id="Error_x5F_Basket">
+</g>
+                  <g id="OK_x5F_Basket">
+</g>
+</svg>
+              </div>
+              Social Media
+            </dt>
+            <dd class="mt-2 text-base leading-7 text-gray-600">Our social media management services ensure that your
+              business stays active and engaging on platforms like Facebook, Instagram, and Twitter.
             </dd>
           </div>
-          <div class="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
-            <dt class="text-base font-semibold leading-7 text-gray-900 lg:col-span-5">What do you call someone with no body and no nose?</dt>
-            <dd class="mt-4 lg:col-span-7 lg:mt-0">
-              <p class="text-base leading-7 text-gray-600">Nobody knows. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.</p>
+          <div class="relative pl-16">
+            <dt class="text-base font-semibold leading-7 text-gray-900">
+              <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-red-600">
+                <svg class="h-8 w-8 text-white" fill="#fff" version="1.1" id="Layer_1"
+                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                     viewBox="0 0 32 32" xml:space="preserve">
+<path id="canada--maple-leaf_1_" d="M16.361,31h-0.72v-6.592l-7.596,0.949c-0.124,0.015-0.245-0.034-0.323-0.129
+	c-0.079-0.096-0.103-0.225-0.063-0.343l0.917-2.753l-7.792-5.845c-0.107-0.081-0.161-0.213-0.14-0.346s0.115-0.242,0.242-0.284
+	l2.606-0.869L1.678,11.16c-0.063-0.126-0.047-0.277,0.041-0.386s0.23-0.16,0.368-0.124l3.677,0.919l0.895-2.684
+	c0.039-0.119,0.137-0.208,0.259-0.237C7.039,8.62,7.167,8.656,7.255,8.744l4.126,4.125L9.649,5.078
+	c-0.028-0.126,0.014-0.259,0.11-0.345c0.097-0.087,0.234-0.115,0.355-0.074l2.727,0.909l2.852-4.752c0.13-0.217,0.487-0.217,0.617,0
+	l2.852,4.752l2.727-0.909c0.126-0.041,0.259-0.013,0.355,0.074c0.097,0.086,0.139,0.219,0.11,0.345l-1.731,7.793l4.125-4.125
+	c0.088-0.088,0.215-0.125,0.338-0.096c0.121,0.029,0.219,0.118,0.259,0.237l0.895,2.684l3.677-0.919
+	c0.133-0.033,0.28,0.014,0.368,0.124c0.088,0.109,0.104,0.26,0.041,0.386L28.51,14.79l2.606,0.869
+	c0.127,0.042,0.22,0.151,0.241,0.284c0.021,0.133-0.032,0.265-0.14,0.346l-7.792,5.844l0.918,2.754
+	c0.039,0.118,0.015,0.247-0.063,0.343c-0.077,0.096-0.192,0.146-0.323,0.129l-7.596-0.949V31z M1.766,16.124l7.451,5.588
+	c0.124,0.093,0.175,0.255,0.125,0.402l-0.819,2.458l7.434-0.93c0.03-0.005,0.06-0.003,0.089,0l7.434,0.93l-0.819-2.458
+	c-0.049-0.147,0.002-0.31,0.126-0.402l7.45-5.588l-2.349-0.783c-0.099-0.033-0.179-0.107-0.219-0.204
+	c-0.039-0.096-0.036-0.206,0.011-0.299l1.65-3.3l-3.241,0.81c-0.185,0.047-0.369-0.058-0.429-0.235l-0.815-2.447l-4.588,4.588
+	c-0.113,0.114-0.29,0.138-0.428,0.061c-0.141-0.077-0.213-0.237-0.179-0.394l1.862-8.379l-2.397,0.799
+	c-0.161,0.055-0.336-0.011-0.423-0.156L16.001,1.7L13.31,6.185c-0.087,0.145-0.264,0.209-0.422,0.156L10.49,5.542l1.863,8.379
+	c0.035,0.156-0.038,0.317-0.178,0.394c-0.141,0.079-0.314,0.052-0.428-0.061L7.158,9.667l-0.816,2.447
+	c-0.059,0.179-0.245,0.282-0.429,0.235l-3.241-0.81l1.65,3.3c0.047,0.093,0.051,0.203,0.011,0.299
+	c-0.04,0.097-0.12,0.171-0.219,0.204L1.766,16.124z"/>
+</svg>
+              </div>
+              Canadian
+            </dt>
+            <dd class="mt-2 text-base leading-7 text-gray-600">We offer quality services for small businesses across
+              Canada and it Provices, in French and English, ensuring that your business reaches its full potential.
             </dd>
           </div>
-          <div class="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
-            <dt class="text-base font-semibold leading-7 text-gray-900 lg:col-span-5">Why do you never see elephants hiding in trees?</dt>
-            <dd class="mt-4 lg:col-span-7 lg:mt-0">
-              <p class="text-base leading-7 text-gray-600">Because they're so good at it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.</p>
-            </dd>
-          </div>
-          <div class="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
-            <dt class="text-base font-semibold leading-7 text-gray-900 lg:col-span-5">Why can't you hear a pterodactyl go to the bathroom?</dt>
-            <dd class="mt-4 lg:col-span-7 lg:mt-0">
-              <p class="text-base leading-7 text-gray-600">Because the pee is silent. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, quas voluptatibus ex culpa ipsum, aspernatur blanditiis fugiat ullam magnam suscipit deserunt illum natus facilis atque vero consequatur! Quisquam, debitis error.</p>
-            </dd>
-          </div>
-          <div class="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
-            <dt class="text-base font-semibold leading-7 text-gray-900 lg:col-span-5">Why did the invisible man turn down the job offer?</dt>
-            <dd class="mt-4 lg:col-span-7 lg:mt-0">
-              <p class="text-base leading-7 text-gray-600">He couldn't see himself doing it. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet perspiciatis officiis corrupti tenetur. Temporibus ut voluptatibus, perferendis sed unde rerum deserunt eius.</p>
+          <div class="relative pl-16">
+            <dt class="text-base font-semibold leading-7 text-gray-900">
+              <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-red-600">
+                <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                     aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M7.864 4.243A7.5 7.5 0 0119.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 004.5 10.5a7.464 7.464 0 01-1.15 3.993m1.989 3.559A11.209 11.209 0 008.25 10.5a3.75 3.75 0 117.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 01-3.6 9.75m6.633-4.596a18.666 18.666 0 01-2.485 5.33"></path>
+                </svg>
+              </div>
+              Advanced
+            </dt>
+            <dd class="mt-2 text-base leading-7 text-gray-600">Our services are designed to attract more customers and
+              enhance the quality of your services, ensuring a personalized experience.
             </dd>
           </div>
 
         </dl>
       </div>
+    </div>
 
-      <!-- CTA section -->
-      <div class="relative -z-10 mt-32 px-6 lg:px-8">
-        <div class="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 transform-gpu justify-center overflow-hidden blur-3xl sm:bottom-0 sm:right-[calc(50%-6rem)] sm:top-auto sm:translate-y-0 sm:transform-gpu sm:justify-end" aria-hidden="true">
-          <div class="aspect-[1108/632] w-[69.25rem] flex-none bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-25" style="clip-path: polygon(73.6% 48.6%, 91.7% 88.5%, 100% 53.9%, 97.4% 18.1%, 92.5% 15.4%, 75.7% 36.3%, 55.3% 52.8%, 46.5% 50.9%, 45% 37.4%, 50.3% 13.1%, 21.3% 36.2%, 0.1% 0.1%, 5.4% 49.1%, 21.4% 36.4%, 58.9% 100%, 73.6% 48.6%)"></div>
-        </div>
-        <div class="mx-auto max-w-2xl text-center">
-          <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Boost your productivity.<br>Start using our app today.</h2>
-          <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600">Incididunt sint fugiat pariatur cupidatat consectetur sit cillum anim id veniam aliqua proident excepteur commodo do ea.</p>
-          <div class="mt-10 flex items-center justify-center gap-x-6">
-            <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get started</a>
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Learn more <span aria-hidden="true">→</span></a>
+
+    <div class="max-w-4xl mx-auto px-5 mt-16 mb-16">
+
+      <div class="text-center">
+        <h2 class="font-semibold text-3xl">Services you'll love</h2>
+        <p class="max-w-md mx-auto mt-2 text-gray-500">A responsive documentation template built for everyone who wants
+          to create a plugin.</p>
+      </div>
+
+
+      <div class="grid md:grid-cols-2 gap-10 mt-10">
+
+
+        <div class="flex gap-4 items-start">
+            <span class="text-red-600 bg-red-500/10 p-3 rounded-full">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                 class="w-5 h-5"><path
+              d="M0.849976 1.74998C0.849976 1.25292 1.25292 0.849976 1.74998 0.849976H3.24998C3.74703 0.849976 4.14998 1.25292 4.14998 1.74998V2.04998H10.85V1.74998C10.85 1.25292 11.2529 0.849976 11.75 0.849976H13.25C13.747 0.849976 14.15 1.25292 14.15 1.74998V3.24998C14.15 3.74703 13.747 4.14998 13.25 4.14998H12.95V10.85H13.25C13.747 10.85 14.15 11.2529 14.15 11.75V13.25C14.15 13.747 13.747 14.15 13.25 14.15H11.75C11.2529 14.15 10.85 13.747 10.85 13.25V12.95H4.14998V13.25C4.14998 13.747 3.74703 14.15 3.24998 14.15H1.74998C1.25292 14.15 0.849976 13.747 0.849976 13.25V11.75C0.849976 11.2529 1.25292 10.85 1.74998 10.85H2.04998V4.14998H1.74998C1.25292 4.14998 0.849976 3.74703 0.849976 3.24998V1.74998ZM2.94998 4.14998V10.85H3.24998C3.74703 10.85 4.14998 11.2529 4.14998 11.75V12.05H10.85V11.75C10.85 11.2529 11.2529 10.85 11.75 10.85H12.05V4.14998H11.75C11.2529 4.14998 10.85 3.74703 10.85 3.24998V2.94998H4.14998V3.24998C4.14998 3.74703 3.74703 4.14998 3.24998 4.14998H2.94998ZM2.34998 1.74998H1.74998V2.34998V2.64998V3.24998H2.34998H2.64998H3.24998V2.64998V2.34998V1.74998H2.64998H2.34998ZM5.09998 5.99998C5.09998 5.50292 5.50292 5.09998 5.99998 5.09998H6.99998C7.49703 5.09998 7.89998 5.50292 7.89998 5.99998V6.99998C7.89998 7.03591 7.89787 7.07134 7.89378 7.10618C7.92861 7.10208 7.96405 7.09998 7.99998 7.09998H8.99998C9.49703 7.09998 9.89998 7.50292 9.89998 7.99998V8.99998C9.89998 9.49703 9.49703 9.89998 8.99998 9.89998H7.99998C7.50292 9.89998 7.09998 9.49703 7.09998 8.99998V7.99998C7.09998 7.96405 7.10208 7.92861 7.10618 7.89378C7.07134 7.89787 7.03591 7.89998 6.99998 7.89998H5.99998C5.50292 7.89998 5.09998 7.49703 5.09998 6.99998V5.99998ZM6.09998 5.99998H5.99998V6.09998V6.89998V6.99998H6.09998H6.89998H6.99998V6.89998V6.09998V5.99998H6.89998H6.09998ZM7.99998 7.99998H8.09998H8.89998H8.99998V8.09998V8.89998V8.99998H8.89998H8.09998H7.99998V8.89998V8.09998V7.99998ZM2.64998 11.75H2.34998H1.74998V12.35V12.65V13.25H2.34998H2.64998H3.24998V12.65V12.35V11.75H2.64998ZM11.75 1.74998H12.35H12.65H13.25V2.34998V2.64998V3.24998H12.65H12.35H11.75V2.64998V2.34998V1.74998ZM12.65 11.75H12.35H11.75V12.35V12.65V13.25H12.35H12.65H13.25V12.65V12.35V11.75H12.65Z"
+              fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></span>
+          <div>
+            <h3 class="font-semibold text-xl">Website Design and Development:</h3>
+            <p class="mt-1 text-gray-500"> Creating visually appealing and functional websites tailored to the client's
+              needs.
+              Front-end development for user interface (UI) and user experience (UX) design.
+              Back-end development for server-side scripting and database integration.</p>
           </div>
         </div>
-        <div class="absolute left-1/2 right-0 top-full -z-10 hidden -translate-y-1/2 transform-gpu overflow-hidden blur-3xl sm:block" aria-hidden="true">
-          <div class="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+
+
+        <div class="flex gap-4 items-start">
+            <span class="text-red-600 bg-red-500/10 p-3 rounded-full">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                 class="w-5 h-5"><path
+              d="M3.00014 2.73895C3.00014 2.94698 2.76087 3.06401 2.59666 2.93628L1.00386 1.69744C0.875177 1.59735 0.875177 1.40286 1.00386 1.30277L2.59666 0.063928C2.76087 -0.0637944 3.00014 0.0532293 3.00014 0.261266V1.00012H9.00009V0.261296C9.00009 0.0532591 9.23936 -0.0637646 9.40358 0.0639578L10.9964 1.3028C11.1251 1.40289 11.1251 1.59738 10.9964 1.69747L9.40358 2.93631C9.23936 3.06404 9.00009 2.94701 9.00009 2.73898V2.00012H3.00014V2.73895ZM9.50002 4.99998H2.50002C2.22388 4.99998 2.00002 5.22384 2.00002 5.49998V12.5C2.00002 12.7761 2.22388 13 2.50002 13H9.50002C9.77616 13 10 12.7761 10 12.5V5.49998C10 5.22384 9.77616 4.99998 9.50002 4.99998ZM2.50002 3.99998C1.67159 3.99998 1.00002 4.67156 1.00002 5.49998V12.5C1.00002 13.3284 1.67159 14 2.50002 14H9.50002C10.3284 14 11 13.3284 11 12.5V5.49998C11 4.67156 10.3284 3.99998 9.50002 3.99998H2.50002ZM14.7389 6.00001H14V12H14.7389C14.9469 12 15.064 12.2393 14.9362 12.4035L13.6974 13.9963C13.5973 14.125 13.4028 14.125 13.3027 13.9963L12.0639 12.4035C11.9362 12.2393 12.0532 12 12.2612 12H13V6.00001H12.2612C12.0532 6.00001 11.9361 5.76074 12.0639 5.59653L13.3027 4.00373C13.4028 3.87505 13.5973 3.87505 13.6974 4.00374L14.9362 5.59653C15.0639 5.76074 14.9469 6.00001 14.7389 6.00001Z"
+              fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></span>
+          <div>
+            <h3 class="font-semibold text-xl">E-commerce Development</h3>
+            <p class="mt-1 text-gray-500">Building online stores with features like product listings, shopping carts,
+              secure payment gateways, and order management systems. </p>
+          </div>
+        </div>
+
+
+        <div class="flex gap-4 items-start">
+            <span class="text-red-600 bg-red-500/10 p-3 rounded-full">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                 class="w-5 h-5"><path
+              d="M1 2C0.447715 2 0 2.44772 0 3V12C0 12.5523 0.447715 13 1 13H14C14.5523 13 15 12.5523 15 12V3C15 2.44772 14.5523 2 14 2H1ZM1 3L14 3V3.92494C13.9174 3.92486 13.8338 3.94751 13.7589 3.99505L7.5 7.96703L1.24112 3.99505C1.16621 3.94751 1.0826 3.92486 1 3.92494V3ZM1 4.90797V12H14V4.90797L7.74112 8.87995C7.59394 8.97335 7.40606 8.97335 7.25888 8.87995L1 4.90797Z"
+              fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></span>
+          <div>
+            <h3 class="font-semibold text-xl">Responsive Web Design</h3>
+            <p class="mt-1 text-gray-500"> Ensuring that websites are optimized for various devices and screen sizes,
+              providing a seamless user experience across desktops, tablets, and smartphones.</p>
+          </div>
+        </div>
+
+
+        <div class="flex gap-4 items-start">
+            <span class="text-red-600 bg-red-500/10 p-3 rounded-full">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                 class="w-5 h-5"><path
+              d="M4.5 2C3.11929 2 2 3.11929 2 4.5C2 5.88072 3.11929 7 4.5 7C5.88072 7 7 5.88072 7 4.5C7 3.11929 5.88072 2 4.5 2ZM3 4.5C3 3.67157 3.67157 3 4.5 3C5.32843 3 6 3.67157 6 4.5C6 5.32843 5.32843 6 4.5 6C3.67157 6 3 5.32843 3 4.5ZM10.5 2C9.11929 2 8 3.11929 8 4.5C8 5.88072 9.11929 7 10.5 7C11.8807 7 13 5.88072 13 4.5C13 3.11929 11.8807 2 10.5 2ZM9 4.5C9 3.67157 9.67157 3 10.5 3C11.3284 3 12 3.67157 12 4.5C12 5.32843 11.3284 6 10.5 6C9.67157 6 9 5.32843 9 4.5ZM2 10.5C2 9.11929 3.11929 8 4.5 8C5.88072 8 7 9.11929 7 10.5C7 11.8807 5.88072 13 4.5 13C3.11929 13 2 11.8807 2 10.5ZM4.5 9C3.67157 9 3 9.67157 3 10.5C3 11.3284 3.67157 12 4.5 12C5.32843 12 6 11.3284 6 10.5C6 9.67157 5.32843 9 4.5 9ZM10.5 8C9.11929 8 8 9.11929 8 10.5C8 11.8807 9.11929 13 10.5 13C11.8807 13 13 11.8807 13 10.5C13 9.11929 11.8807 8 10.5 8ZM9 10.5C9 9.67157 9.67157 9 10.5 9C11.3284 9 12 9.67157 12 10.5C12 11.3284 11.3284 12 10.5 12C9.67157 12 9 11.3284 9 10.5Z"
+              fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></span>
+          <div>
+            <h3 class="font-semibold text-xl">Content Management System (CMS) Integration:</h3>
+            <p class="mt-1 text-gray-500"> Implementing CMS platforms (e.g., WordPress, Drupal, Joomla) to enable
+              clients to manage and update website content easily. </p>
+          </div>
+        </div>
+
+
+        <div class="flex gap-4 items-start">
+            <span class="text-red-600 bg-red-500/10 p-3 rounded-full">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                 class="w-5 h-5"><path
+              d="M9.96424 2.68571C10.0668 2.42931 9.94209 2.13833 9.6857 2.03577C9.4293 1.93322 9.13832 2.05792 9.03576 2.31432L5.03576 12.3143C4.9332 12.5707 5.05791 12.8617 5.3143 12.9642C5.5707 13.0668 5.86168 12.9421 5.96424 12.6857L9.96424 2.68571ZM3.85355 5.14646C4.04882 5.34172 4.04882 5.6583 3.85355 5.85356L2.20711 7.50001L3.85355 9.14646C4.04882 9.34172 4.04882 9.6583 3.85355 9.85356C3.65829 10.0488 3.34171 10.0488 3.14645 9.85356L1.14645 7.85356C0.951184 7.6583 0.951184 7.34172 1.14645 7.14646L3.14645 5.14646C3.34171 4.9512 3.65829 4.9512 3.85355 5.14646ZM11.1464 5.14646C11.3417 4.9512 11.6583 4.9512 11.8536 5.14646L13.8536 7.14646C14.0488 7.34172 14.0488 7.6583 13.8536 7.85356L11.8536 9.85356C11.6583 10.0488 11.3417 10.0488 11.1464 9.85356C10.9512 9.6583 10.9512 9.34172 11.1464 9.14646L12.7929 7.50001L11.1464 5.85356C10.9512 5.6583 10.9512 5.34172 11.1464 5.14646Z"
+              fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></span>
+          <div>
+            <h3 class="font-semibold text-xl"> Custom Web Application Development: </h3>
+            <p class="mt-1 text-gray-500"> Developing tailored web applications to meet specific business requirements,
+              such as customer portals, booking systems, or project management tools.. </p>
+          </div>
+        </div>
+
+
+        <div class="flex gap-4 items-start">
+            <span class="text-red-600 bg-red-500/10 p-3 rounded-full">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                 class="w-5 h-5"><path
+              d="M7.28856 0.796908C7.42258 0.734364 7.57742 0.734364 7.71144 0.796908L13.7114 3.59691C13.8875 3.67906 14 3.85574 14 4.05V10.95C14 11.1443 13.8875 11.3209 13.7114 11.4031L7.71144 14.2031C7.57742 14.2656 7.42258 14.2656 7.28856 14.2031L1.28856 11.4031C1.11252 11.3209 1 11.1443 1 10.95V4.05C1 3.85574 1.11252 3.67906 1.28856 3.59691L7.28856 0.796908ZM2 4.80578L7 6.93078V12.9649L2 10.6316V4.80578ZM8 12.9649L13 10.6316V4.80578L8 6.93078V12.9649ZM7.5 6.05672L12.2719 4.02866L7.5 1.80176L2.72809 4.02866L7.5 6.05672Z"
+              fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></span>
+          <div>
+            <h3 class="font-semibold text-xl">Website Maintenance and Support:</h3>
+            <p class="mt-1 text-gray-500"> Providing ongoing support, updates, and maintenance services to ensure
+              websites remain secure, up-to-date, and functional..</p>
+          </div>
+        </div>
+        <div class="flex gap-4 items-start">
+            <span class="text-red-600 bg-red-500/10 p-3 rounded-full">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                 class="w-5 h-5"><path
+              d="M7.28856 0.796908C7.42258 0.734364 7.57742 0.734364 7.71144 0.796908L13.7114 3.59691C13.8875 3.67906 14 3.85574 14 4.05V10.95C14 11.1443 13.8875 11.3209 13.7114 11.4031L7.71144 14.2031C7.57742 14.2656 7.42258 14.2656 7.28856 14.2031L1.28856 11.4031C1.11252 11.3209 1 11.1443 1 10.95V4.05C1 3.85574 1.11252 3.67906 1.28856 3.59691L7.28856 0.796908ZM2 4.80578L7 6.93078V12.9649L2 10.6316V4.80578ZM8 12.9649L13 10.6316V4.80578L8 6.93078V12.9649ZM7.5 6.05672L12.2719 4.02866L7.5 1.80176L2.72809 4.02866L7.5 6.05672Z"
+              fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></span>
+          <div>
+            <h3 class="font-semibold text-xl">Security and Performance Optimization:</h3>
+            <p class="mt-1 text-gray-500"> Providing ongoing support, updates, and maintenance services to ensure
+              websites remain secure, up-to-date, and functional.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 items-start">
+            <span class="text-red-600 bg-red-500/10 p-3 rounded-full">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                 class="w-5 h-5"><path
+              d="M7.28856 0.796908C7.42258 0.734364 7.57742 0.734364 7.71144 0.796908L13.7114 3.59691C13.8875 3.67906 14 3.85574 14 4.05V10.95C14 11.1443 13.8875 11.3209 13.7114 11.4031L7.71144 14.2031C7.57742 14.2656 7.42258 14.2656 7.28856 14.2031L1.28856 11.4031C1.11252 11.3209 1 11.1443 1 10.95V4.05C1 3.85574 1.11252 3.67906 1.28856 3.59691L7.28856 0.796908ZM2 4.80578L7 6.93078V12.9649L2 10.6316V4.80578ZM8 12.9649L13 10.6316V4.80578L8 6.93078V12.9649ZM7.5 6.05672L12.2719 4.02866L7.5 1.80176L2.72809 4.02866L7.5 6.05672Z"
+              fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></span>
+          <div>
+            <h3 class="font-semibold text-xl">Mobile App Development</h3>
+            <p class="mt-1 text-gray-500"> Extending services to mobile app development for iOS platforms, ensuring
+              consistency with the website's branding and functionality.</p>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!--      Digital Marketing -->
+
+      <div class="grid md:grid-cols-2 gap-10 mt-10">
+
+
+        <div class="flex gap-4 items-start">
+            <span class="text-red-600 bg-red-500/10 p-3 rounded-full">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                 class="w-5 h-5"><path
+              d="M0.849976 1.74998C0.849976 1.25292 1.25292 0.849976 1.74998 0.849976H3.24998C3.74703 0.849976 4.14998 1.25292 4.14998 1.74998V2.04998H10.85V1.74998C10.85 1.25292 11.2529 0.849976 11.75 0.849976H13.25C13.747 0.849976 14.15 1.25292 14.15 1.74998V3.24998C14.15 3.74703 13.747 4.14998 13.25 4.14998H12.95V10.85H13.25C13.747 10.85 14.15 11.2529 14.15 11.75V13.25C14.15 13.747 13.747 14.15 13.25 14.15H11.75C11.2529 14.15 10.85 13.747 10.85 13.25V12.95H4.14998V13.25C4.14998 13.747 3.74703 14.15 3.24998 14.15H1.74998C1.25292 14.15 0.849976 13.747 0.849976 13.25V11.75C0.849976 11.2529 1.25292 10.85 1.74998 10.85H2.04998V4.14998H1.74998C1.25292 4.14998 0.849976 3.74703 0.849976 3.24998V1.74998ZM2.94998 4.14998V10.85H3.24998C3.74703 10.85 4.14998 11.2529 4.14998 11.75V12.05H10.85V11.75C10.85 11.2529 11.2529 10.85 11.75 10.85H12.05V4.14998H11.75C11.2529 4.14998 10.85 3.74703 10.85 3.24998V2.94998H4.14998V3.24998C4.14998 3.74703 3.74703 4.14998 3.24998 4.14998H2.94998ZM2.34998 1.74998H1.74998V2.34998V2.64998V3.24998H2.34998H2.64998H3.24998V2.64998V2.34998V1.74998H2.64998H2.34998ZM5.09998 5.99998C5.09998 5.50292 5.50292 5.09998 5.99998 5.09998H6.99998C7.49703 5.09998 7.89998 5.50292 7.89998 5.99998V6.99998C7.89998 7.03591 7.89787 7.07134 7.89378 7.10618C7.92861 7.10208 7.96405 7.09998 7.99998 7.09998H8.99998C9.49703 7.09998 9.89998 7.50292 9.89998 7.99998V8.99998C9.89998 9.49703 9.49703 9.89998 8.99998 9.89998H7.99998C7.50292 9.89998 7.09998 9.49703 7.09998 8.99998V7.99998C7.09998 7.96405 7.10208 7.92861 7.10618 7.89378C7.07134 7.89787 7.03591 7.89998 6.99998 7.89998H5.99998C5.50292 7.89998 5.09998 7.49703 5.09998 6.99998V5.99998ZM6.09998 5.99998H5.99998V6.09998V6.89998V6.99998H6.09998H6.89998H6.99998V6.89998V6.09998V5.99998H6.89998H6.09998ZM7.99998 7.99998H8.09998H8.89998H8.99998V8.09998V8.89998V8.99998H8.89998H8.09998H7.99998V8.89998V8.09998V7.99998ZM2.64998 11.75H2.34998H1.74998V12.35V12.65V13.25H2.34998H2.64998H3.24998V12.65V12.35V11.75H2.64998ZM11.75 1.74998H12.35H12.65H13.25V2.34998V2.64998V3.24998H12.65H12.35H11.75V2.64998V2.34998V1.74998ZM12.65 11.75H12.35H11.75V12.35V12.65V13.25H12.35H12.65H13.25V12.65V12.35V11.75H12.65Z"
+              fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></span>
+          <div>
+            <h3 class="font-semibold text-xl">Search Engine Optimization (SEO)</h3>
+            <p class="mt-1 text-gray-500"> Optimizing websites for search engines to improve visibility and rankings in
+              search results, driving organic traffic.</p>
+          </div>
+        </div>
+
+
+        <div class="flex gap-4 items-start">
+            <span class="text-red-600 bg-red-500/10 p-3 rounded-full">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                 class="w-5 h-5"><path
+              d="M3.00014 2.73895C3.00014 2.94698 2.76087 3.06401 2.59666 2.93628L1.00386 1.69744C0.875177 1.59735 0.875177 1.40286 1.00386 1.30277L2.59666 0.063928C2.76087 -0.0637944 3.00014 0.0532293 3.00014 0.261266V1.00012H9.00009V0.261296C9.00009 0.0532591 9.23936 -0.0637646 9.40358 0.0639578L10.9964 1.3028C11.1251 1.40289 11.1251 1.59738 10.9964 1.69747L9.40358 2.93631C9.23936 3.06404 9.00009 2.94701 9.00009 2.73898V2.00012H3.00014V2.73895ZM9.50002 4.99998H2.50002C2.22388 4.99998 2.00002 5.22384 2.00002 5.49998V12.5C2.00002 12.7761 2.22388 13 2.50002 13H9.50002C9.77616 13 10 12.7761 10 12.5V5.49998C10 5.22384 9.77616 4.99998 9.50002 4.99998ZM2.50002 3.99998C1.67159 3.99998 1.00002 4.67156 1.00002 5.49998V12.5C1.00002 13.3284 1.67159 14 2.50002 14H9.50002C10.3284 14 11 13.3284 11 12.5V5.49998C11 4.67156 10.3284 3.99998 9.50002 3.99998H2.50002ZM14.7389 6.00001H14V12H14.7389C14.9469 12 15.064 12.2393 14.9362 12.4035L13.6974 13.9963C13.5973 14.125 13.4028 14.125 13.3027 13.9963L12.0639 12.4035C11.9362 12.2393 12.0532 12 12.2612 12H13V6.00001H12.2612C12.0532 6.00001 11.9361 5.76074 12.0639 5.59653L13.3027 4.00373C13.4028 3.87505 13.5973 3.87505 13.6974 4.00374L14.9362 5.59653C15.0639 5.76074 14.9469 6.00001 14.7389 6.00001Z"
+              fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></span>
+          <div>
+            <h3 class="font-semibold text-xl">Email Marketing</h3>
+            <p class="mt-1 text-gray-500"> Designing and implementing email campaigns for lead generation, nurturing,
+              and customer retention.
+              Segmentation and personalization strategies.
+              A/B testing for email subject lines and content. </p>
+          </div>
+        </div>
+
+
+        <div class="flex gap-4 items-start">
+            <span class="text-red-600 bg-red-500/10 p-3 rounded-full">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                 class="w-5 h-5"><path
+              d="M1 2C0.447715 2 0 2.44772 0 3V12C0 12.5523 0.447715 13 1 13H14C14.5523 13 15 12.5523 15 12V3C15 2.44772 14.5523 2 14 2H1ZM1 3L14 3V3.92494C13.9174 3.92486 13.8338 3.94751 13.7589 3.99505L7.5 7.96703L1.24112 3.99505C1.16621 3.94751 1.0826 3.92486 1 3.92494V3ZM1 4.90797V12H14V4.90797L7.74112 8.87995C7.59394 8.97335 7.40606 8.97335 7.25888 8.87995L1 4.90797Z"
+              fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></span>
+          <div>
+            <h3 class="font-semibold text-xl">Responsive Web Design</h3>
+            <p class="mt-1 text-gray-500"> Designing and implementing email campaigns for lead generation, nurturing,
+              and customer retention.
+              Segmentation and personalization strategies.
+              A/B testing for email subject lines and content.</p>
+          </div>
+        </div>
+
+
+        <div class="flex gap-4 items-start">
+            <span class="text-red-600 bg-red-500/10 p-3 rounded-full">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                 class="w-5 h-5"><path
+              d="M4.5 2C3.11929 2 2 3.11929 2 4.5C2 5.88072 3.11929 7 4.5 7C5.88072 7 7 5.88072 7 4.5C7 3.11929 5.88072 2 4.5 2ZM3 4.5C3 3.67157 3.67157 3 4.5 3C5.32843 3 6 3.67157 6 4.5C6 5.32843 5.32843 6 4.5 6C3.67157 6 3 5.32843 3 4.5ZM10.5 2C9.11929 2 8 3.11929 8 4.5C8 5.88072 9.11929 7 10.5 7C11.8807 7 13 5.88072 13 4.5C13 3.11929 11.8807 2 10.5 2ZM9 4.5C9 3.67157 9.67157 3 10.5 3C11.3284 3 12 3.67157 12 4.5C12 5.32843 11.3284 6 10.5 6C9.67157 6 9 5.32843 9 4.5ZM2 10.5C2 9.11929 3.11929 8 4.5 8C5.88072 8 7 9.11929 7 10.5C7 11.8807 5.88072 13 4.5 13C3.11929 13 2 11.8807 2 10.5ZM4.5 9C3.67157 9 3 9.67157 3 10.5C3 11.3284 3.67157 12 4.5 12C5.32843 12 6 11.3284 6 10.5C6 9.67157 5.32843 9 4.5 9ZM10.5 8C9.11929 8 8 9.11929 8 10.5C8 11.8807 9.11929 13 10.5 13C11.8807 13 13 11.8807 13 10.5C13 9.11929 11.8807 8 10.5 8ZM9 10.5C9 9.67157 9.67157 9 10.5 9C11.3284 9 12 9.67157 12 10.5C12 11.3284 11.3284 12 10.5 12C9.67157 12 9 11.3284 9 10.5Z"
+              fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></span>
+          <div>
+            <h3 class="font-semibold text-xl"> Influencer Marketing </h3>
+            <p class="mt-1 text-gray-500"> Identifying and partnering with influencers relevant to the brand or
+              industry.
+              Managing influencer relationships and campaigns.</p>
+          </div>
+        </div>
+
+
+        <div class="flex gap-4 items-start">
+            <span class="text-red-600 bg-red-500/10 p-3 rounded-full">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                 class="w-5 h-5"><path
+              d="M9.96424 2.68571C10.0668 2.42931 9.94209 2.13833 9.6857 2.03577C9.4293 1.93322 9.13832 2.05792 9.03576 2.31432L5.03576 12.3143C4.9332 12.5707 5.05791 12.8617 5.3143 12.9642C5.5707 13.0668 5.86168 12.9421 5.96424 12.6857L9.96424 2.68571ZM3.85355 5.14646C4.04882 5.34172 4.04882 5.6583 3.85355 5.85356L2.20711 7.50001L3.85355 9.14646C4.04882 9.34172 4.04882 9.6583 3.85355 9.85356C3.65829 10.0488 3.34171 10.0488 3.14645 9.85356L1.14645 7.85356C0.951184 7.6583 0.951184 7.34172 1.14645 7.14646L3.14645 5.14646C3.34171 4.9512 3.65829 4.9512 3.85355 5.14646ZM11.1464 5.14646C11.3417 4.9512 11.6583 4.9512 11.8536 5.14646L13.8536 7.14646C14.0488 7.34172 14.0488 7.6583 13.8536 7.85356L11.8536 9.85356C11.6583 10.0488 11.3417 10.0488 11.1464 9.85356C10.9512 9.6583 10.9512 9.34172 11.1464 9.14646L12.7929 7.50001L11.1464 5.85356C10.9512 5.6583 10.9512 5.34172 11.1464 5.14646Z"
+              fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></span>
+          <div>
+            <h3 class="font-semibold text-xl"> Conversion Rate Optimization (CRO) </h3>
+            <p class="mt-1 text-gray-500"> Analyzing user behavior to identify and improve website elements that impact
+              conversion rates.
+              A/B testing for landing pages and website components. </p>
+          </div>
+        </div>
+
+
+        <div class="flex gap-4 items-start">
+            <span class="text-red-600 bg-red-500/10 p-3 rounded-full">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                 class="w-5 h-5"><path
+              d="M7.28856 0.796908C7.42258 0.734364 7.57742 0.734364 7.71144 0.796908L13.7114 3.59691C13.8875 3.67906 14 3.85574 14 4.05V10.95C14 11.1443 13.8875 11.3209 13.7114 11.4031L7.71144 14.2031C7.57742 14.2656 7.42258 14.2656 7.28856 14.2031L1.28856 11.4031C1.11252 11.3209 1 11.1443 1 10.95V4.05C1 3.85574 1.11252 3.67906 1.28856 3.59691L7.28856 0.796908ZM2 4.80578L7 6.93078V12.9649L2 10.6316V4.80578ZM8 12.9649L13 10.6316V4.80578L8 6.93078V12.9649ZM7.5 6.05672L12.2719 4.02866L7.5 1.80176L2.72809 4.02866L7.5 6.05672Z"
+              fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></span>
+          <div>
+            <h3 class="font-semibold text-xl">Local SEO and Location-Based Marketing:</h3>
+            <p class="mt-1 text-gray-500"> Optimizing for local search.
+              Local business listings and review management.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 items-start">
+            <span class="text-red-600 bg-red-500/10 p-3 rounded-full">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                 class="w-5 h-5"><path
+              d="M9.96424 2.68571C10.0668 2.42931 9.94209 2.13833 9.6857 2.03577C9.4293 1.93322 9.13832 2.05792 9.03576 2.31432L5.03576 12.3143C4.9332 12.5707 5.05791 12.8617 5.3143 12.9642C5.5707 13.0668 5.86168 12.9421 5.96424 12.6857L9.96424 2.68571ZM3.85355 5.14646C4.04882 5.34172 4.04882 5.6583 3.85355 5.85356L2.20711 7.50001L3.85355 9.14646C4.04882 9.34172 4.04882 9.6583 3.85355 9.85356C3.65829 10.0488 3.34171 10.0488 3.14645 9.85356L1.14645 7.85356C0.951184 7.6583 0.951184 7.34172 1.14645 7.14646L3.14645 5.14646C3.34171 4.9512 3.65829 4.9512 3.85355 5.14646ZM11.1464 5.14646C11.3417 4.9512 11.6583 4.9512 11.8536 5.14646L13.8536 7.14646C14.0488 7.34172 14.0488 7.6583 13.8536 7.85356L11.8536 9.85356C11.6583 10.0488 11.3417 10.0488 11.1464 9.85356C10.9512 9.6583 10.9512 9.34172 11.1464 9.14646L12.7929 7.50001L11.1464 5.85356C10.9512 5.6583 10.9512 5.34172 11.1464 5.14646Z"
+              fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></span>
+          <div>
+            <h3 class="font-semibold text-xl"> Training and Consultation </h3>
+            <p class="mt-1 text-gray-500"> Providing training sessions for clients on managing digital marketing tools.
+              Offering strategic consultation on overall digital marketing strategies and campaigns. </p>
+          </div>
+        </div>
+
+
+        <div class="flex gap-4 items-start">
+            <span class="text-red-600 bg-red-500/10 p-3 rounded-full">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                 class="w-5 h-5"><path
+              d="M7.28856 0.796908C7.42258 0.734364 7.57742 0.734364 7.71144 0.796908L13.7114 3.59691C13.8875 3.67906 14 3.85574 14 4.05V10.95C14 11.1443 13.8875 11.3209 13.7114 11.4031L7.71144 14.2031C7.57742 14.2656 7.42258 14.2656 7.28856 14.2031L1.28856 11.4031C1.11252 11.3209 1 11.1443 1 10.95V4.05C1 3.85574 1.11252 3.67906 1.28856 3.59691L7.28856 0.796908ZM2 4.80578L7 6.93078V12.9649L2 10.6316V4.80578ZM8 12.9649L13 10.6316V4.80578L8 6.93078V12.9649ZM7.5 6.05672L12.2719 4.02866L7.5 1.80176L2.72809 4.02866L7.5 6.05672Z"
+              fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></span>
+          <div>
+            <h3 class="font-semibold text-xl">Chatbot Integration:</h3>
+            <p class="mt-1 text-gray-500"> Developing and integrating chatbots for customer support, lead generation,
+              and interactive website experiences.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!--      NEWSLETTRE INFO-->
+    <!-- Form Acumbamail -->
+    <!-- Form Acumbamail -->
+    <div class="py-5 bg-gray-600 text-white md:py-7 lg:py-14">
+      <div class="container mx-auto px-5 rounded-lg xl:max-w-screen-xl">
+        <div
+          class="p-5 rounded-lg bg-[#1a1a1a] lg:flex lg:justify-between lg:items-center lg:p-10 shadow-lg shadow-gray-500 hover:shadow-none">
+          <div>
+            <h1 class="text-3xl font-bold text-center text-white md:text-4xl lg:text-left mb-6">Sign up for our
+              newsletter</h1>
+            <form action="https://acumbamail.com/newform/subscribe/mF55m0Htx44OUic5wGwn5ufA10vBvq/42094/" method="post"
+                  class="yourFormCustomContainer">
+              <div class="yourFormCustomStyle">
+                <div style="width: 100%; position:relative;">
+                  <label for="r0c0m1i1">Email</label><input id="r0c0m1i1" name="email_1" type="email"
+                                                            placeholder="email here " required=""
+                                                            class="block w-full px-5 py-3 outline-none border rounded shadow-sm text-gray-300 border-[#3c3c3c] bg-[#121212] focus:border-white focus:ring-1 focus:ring-white"/>
+
+                  <!-- Do not delete the following fields, is important in order to protect you from spam :)
+                                           No borres los siguientes campos, es importante para protegerte del spam :)  -->
+
+
+                  <input type="text" name="a834332c" tabindex="-1" value="" style="position: absolute; left: -4900px;"
+                         aria-hidden="true" id="a834332c" autocomplete="off"/>
+
+                  <input type="email" name="b834332c" tabindex="-1" value="" style="position: absolute; left: -5000px;"
+                         aria-hidden="true" id="b834332c" autocomplete="off"/>
+
+                  <input type="checkbox" name="c834332c" tabindex="-1" style="position: absolute; left: -5100px;"
+                         aria-hidden="true" id="c834332c" autocomplete="off"/>
+                </div>
+              </div>
+              <input type="hidden" name="ok_redirect" id="id_redirect"
+                     value="/*You can insert the url that you want to redirect to after a valid registration here */">
+              <input type="submit" value="Subscribe to the list"
+                     class=" w-full mt-2.5 px-5 py-3 rounded shadow-sm focus:outline-none font-medium text-white bg-red-600  flex-shrink-0  w-auto  mt-0  ml-5">
+            </form>
+
+          </div>
+
+          <div class="w-full mt-5 sm:w-auto lg:mt-0 lg:ml-5">
+            <div class="flex justify-center space-x-2.5 lg:justify-start">
+
+              <a href="#" class="p-2.5 rounded-full border-2 border-white transition-colors hover:bg-blue-600"
+                 target="_blank">
+                <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                     viewBox="0 0 16 16">
+                  <path
+                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                </svg>
+              </a>
+              <a href="#" class="p-2.5 rounded-full border-2 border-white transition-colors hover:bg-blue-600"
+                 target="_blank">
+                <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                     viewBox="0 0 16 16">
+                  <path
+                    d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+                </svg>
+              </a>
+              <a href="#" class="p-2.5 rounded-full border-2 border-white transition-colors hover:bg-blue-600"
+                 target="_blank">
+                <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                     viewBox="0 0 16 16">
+                  <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-    </main>
+    </div>
 
-    <!-- Footer -->
-    <div class="mx-auto mt-32 max-w-7xl px-6 lg:px-8">
-      <footer aria-labelledby="footer-heading" class="relative border-t border-gray-900/10 py-24 sm:mt-56 sm:py-32">
-        <h2 id="footer-heading" class="sr-only">Footer</h2>
-        <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-          <img class="h-7" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&amp;shade=600" alt="Company name">
-          <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-            <div class="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 class="text-sm font-semibold leading-6 text-gray-900">Solutions</h3>
-                <ul role="list" class="mt-6 space-y-4">
-                  <li>
-                    <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Hosting</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Data Services</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Uptime Monitoring</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Enterprise Services</a>
-                  </li>
+    <!-- End Form -->    <!-- End Form -->
+    <!--  /////    NEWSLETTRE INFO-->
 
-                </ul>
-              </div>
-              <div class="mt-10 md:mt-0">
-                <h3 class="text-sm font-semibold leading-6 text-gray-900">Support</h3>
-                <ul role="list" class="mt-6 space-y-4">
-                  <li>
-                    <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Pricing</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Documentation</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Guides</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">API Reference</a>
-                  </li>
 
-                </ul>
-              </div>
-            </div>
-            <div class="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 class="text-sm font-semibold leading-6 text-gray-900">Company</h3>
-                <ul role="list" class="mt-6 space-y-4">
-                  <li>
-                    <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">About</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Blog</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Jobs</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Press</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Partners</a>
-                  </li>
-
-                </ul>
-              </div>
-              <div class="mt-10 md:mt-0">
-                <h3 class="text-sm font-semibold leading-6 text-gray-900">Legal</h3>
-                <ul role="list" class="mt-6 space-y-4">
-                  <li>
-                    <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Claim</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Privacy</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Terms</a>
-                  </li>
-
-                </ul>
-              </div>
-            </div>
-          </div>
+    <!-- Testimonial section -->
+    <div class="mx-auto mt-32 max-w-7xl sm:mt-56 sm:px-6 lg:px-8">
+      <div
+        class="relative overflow-hidden bg-gray-900 px-6 py-20 shadow-xl sm:rounded-3xl sm:px-10 sm:py-24 md:px-12 lg:px-20">
+        <img class="absolute inset-0 h-full w-full object-cover brightness-300 saturate-0"
+             src="https://images.unsplash.com/photo-1662118821764-68db771a95ec?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+             alt="">
+        <div class="absolute inset-0 bg-gray-900/90 mix-blend-multiply"></div>
+        <div class="absolute -left-80 -top-56 transform-gpu blur-3xl" aria-hidden="true">
+          <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-r from-[#ff4694] to-red-600 opacity-[0.3]"
+               style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
         </div>
-      </footer>
+        <div class="hidden md:absolute md:bottom-16 md:left-[50rem] md:block md:transform-gpu md:blur-3xl"
+             aria-hidden="true">
+          <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-r from-[#ff4694] to-[#776fff] opacity-25"
+               style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+        </div>
+        <div class="relative mx-auto max-w-2xl lg:mx-0">
+          <img class="h-12 w-auto" src="https://tailwindui.com/img/logos/workcation-logo-white.svg" alt="">
+          <figure>
+            <blockquote class="mt-6 text-lg font-semibold text-white sm:text-xl sm:leading-8">
+              <p>“Your business is important to you, and you understand the why, how, what, and who! We are an agency
+                that helps small businesses grow and continue offering excellent service, unlike many quick-fix
+                solutions out there.
+                We help you uncover the core reasons behind your actions and evaluate your proficiency. Our role is to
+                enhance your business's accessibility and clarity , making it easier for customers to request your
+                services. Additionally, we strive to improve upon the quality of the services you already offer.”</p>
+            </blockquote>
+            <figcaption class="mt-6 text-base text-white">
+              <div class="font-semibold">MYK</div>
+              <div class="mt-1">123C</div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pricing section -->
+    <div class="py-24 sm:pt-48">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-4xl text-center">
+          <h2 class="text-base font-semibold leading-7 text-red-600">Pricing</h2>
+          <p class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">Pricing plans of&nbsp;all&nbsp;sizes</p>
+        </div>
+        <p class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600">
+          Made For Solo-entrepreneur, micro and small business <br/>
+          Best Price in the market, Always Excellent Service and We Garantie a Smile and Satisfaction</p>
+        <div
+          class="isolate mx-auto mt-16 grid max-w-md grid-cols-1 gap-y-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+          <div
+            class="flex flex-col justify-between rounded-3xl bg-white p-8 ring-1 ring-gray-200 xl:p-10 lg:mt-8 lg:rounded-r-none ">
+            <div>
+              <div class="flex items-center justify-between gap-x-4">
+                <h3 id="tier-freelancer" class="text-lg font-semibold leading-8 text-gray-900">Simple 101 :
+                  Solo-Entrepreneur </h3>
+              </div>
+              <p class="mt-4 text-sm leading-6 text-gray-600">The essentials to provide your best work for clients.</p>
+              <p class="mt-6 flex items-baseline gap-x-1">
+                <span class="text-4xl font-bold tracking-tight text-gray-900">$249</span>
+                <span class="text-sm font-semibold leading-6 text-gray-600">/ All taxes Included </span>
+              </p>
+              <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-gray-600">
+                <li class="flex gap-x-3">
+                  <svg class="h-6 w-5 flex-none text-red-600" viewBox="0 0 20 20" fill="currentColor"
+                       aria-hidden="true">
+                    <path fill-rule="evenodd"
+                          d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                          clip-rule="evenodd"></path>
+                  </svg>
+                  <p>Domain name . com <span
+                    class="bg-blue-200 hover:bg-blue-300 py-1 px-1 rounded-lg text-sm">FREE</span></p>
+
+                </li>
+
+                <li class="flex gap-x-3">
+                  <svg class="h-6 w-5 flex-none text-red-600" viewBox="0 0 20 20" fill="currentColor"
+                       aria-hidden="true">
+                    <path fill-rule="evenodd"
+                          d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                          clip-rule="evenodd"></path>
+                  </svg>
+                  <p>1 page Website with 5 sections / design / building / 1 year hosting / SSL Security </p>
+                </li>
+
+                <li class="flex gap-x-3">
+                  <svg class="h-6 w-5 flex-none text-red-600" viewBox="0 0 20 20" fill="currentColor"
+                       aria-hidden="true">
+                    <path fill-rule="evenodd"
+                          d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                          clip-rule="evenodd"></path>
+                  </svg>
+                  <p>3 Profesional Email addresses <span
+                    class="bg-blue-200 hover:bg-blue-300 py-1 px-1 rounded-lg text-sm">FREE</span></p>
+
+                </li>
+                <li class="flex gap-x-3">
+                  <svg class="h-6 w-5 flex-none text-red-600" viewBox="0 0 20 20" fill="currentColor"
+                       aria-hidden="true">
+                    <path fill-rule="evenodd"
+                          d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                          clip-rule="evenodd"></path>
+                  </svg>
+                  Basic analytics Report Monthly
+                </li>
+                <li class="flex gap-x-3">
+                  <svg class="h-6 w-5 flex-none text-red-600" viewBox="0 0 20 20" fill="currentColor"
+                       aria-hidden="true">
+                    <path fill-rule="evenodd"
+                          d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                          clip-rule="evenodd"></path>
+                  </svg>
+                  6 Changes a year
+                </li>
+                <li class="flex gap-x-3">
+                  <svg class="h-6 w-5 flex-none text-red-600" viewBox="0 0 20 20" fill="currentColor"
+                       aria-hidden="true">
+                    <path fill-rule="evenodd"
+                          d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                          clip-rule="evenodd"></path>
+                  </svg>
+                  SEO Optimizating and indexing for google and other social media
+                </li>
+              </ul>
+              <p class="text-sm mt-6 text-gray-400"> Renew as low as $99/year,
+                And since you have a better understanding of your persona and the customer and the market
+                the content of the website is provided by you if not add 50$</p>
+            </div>
+            <a href="#" aria-describedby="tier-freelancer"
+               class="mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600 text-red-600 ring-1 ring-inset ring-red-200 hover:ring-red-300">Buy
+              plan</a>
+          </div>
+          <div
+            class="flex flex-col justify-between rounded-3xl bg-white p-8 ring-1 ring-gray-200 xl:p-10 lg:z-10 lg:rounded-b-none  ">
+            <div>
+              <div class="flex items-center justify-between gap-x-4">
+                <h3 id="tier-startup" class="text-lg font-semibold leading-8 text-red-600">Sell 201: Shop and
+                  Solo-Entrepreneur </h3>
+                <p class="rounded-full bg-red-600/10 px-2.5 py-1 text-xs font-semibold leading-5 text-red-600">
+                  Most popular</p>
+              </div>
+              <p class="mt-4 text-sm leading-6 text-gray-600">A plan that scales with your rapidly growing business.</p>
+              <p class="mt-4 text-sm leading-6 text-gray-600">for Coach, Teacher and Hair-dresser </p>
+              <p class="mt-6 flex items-baseline gap-x-1">
+                <span class="text-4xl font-bold tracking-tight text-gray-900">$1699</span>
+                <span class="text-sm font-semibold leading-6 text-gray-600">/ All taxes included </span>
+              </p>
+              <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-gray-600">
+                <li class="flex gap-x-3">
+                  <svg class="h-6 w-5 flex-none text-red-600" viewBox="0 0 20 20" fill="currentColor"
+                       aria-hidden="true">
+                    <path fill-rule="evenodd"
+                          d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                          clip-rule="evenodd"></path>
+                  </svg>
+                  Booking system
+                </li>
+
+                <li class="flex gap-x-3">
+                  <svg class="h-6 w-5 flex-none text-red-600" viewBox="0 0 20 20" fill="currentColor"
+                       aria-hidden="true">
+                    <path fill-rule="evenodd"
+                          d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                          clip-rule="evenodd"></path>
+                  </svg>
+                  Selling your services or product
+                </li>
+                <li class="flex gap-x-3">
+                  <svg class="h-6 w-5 flex-none text-red-600" viewBox="0 0 20 20" fill="currentColor"
+                       aria-hidden="true">
+                    <path fill-rule="evenodd"
+                          d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                          clip-rule="evenodd"></path>
+                  </svg>
+                  Accepting payment and Subscription system
+                </li>
+                <li class="flex gap-x-3">
+                  <svg class="h-6 w-5 flex-none text-red-600" viewBox="0 0 20 20" fill="currentColor"
+                       aria-hidden="true">
+                    <path fill-rule="evenodd"
+                          d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                          clip-rule="evenodd"></path>
+                  </svg>
+                  Domain name + One Page : intro + services + FAQ ( see the example please)
+                </li>
+                <li class="flex gap-x-3">
+                  <svg class="h-6 w-5 flex-none text-red-600" viewBox="0 0 20 20" fill="currentColor"
+                       aria-hidden="true">
+                    <path fill-rule="evenodd"
+                          d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                          clip-rule="evenodd"></path>
+                  </svg>
+                  3 Professional emails
+                </li>
+                <li class="flex gap-x-3">
+                  <svg class="h-6 w-5 flex-none text-red-600" viewBox="0 0 20 20" fill="currentColor"
+                       aria-hidden="true">
+                    <path fill-rule="evenodd"
+                          d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                          clip-rule="evenodd"></path>
+                  </svg>
+                  Advanced analytics
+                </li>
+                <li class="flex gap-x-3">
+                  <svg class="h-6 w-5 flex-none text-red-600" viewBox="0 0 20 20" fill="currentColor"
+                       aria-hidden="true">
+                    <path fill-rule="evenodd"
+                          d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                          clip-rule="evenodd"></path>
+                  </svg>
+                  Finance Section on the admin Panel
+                </li>
+                <li class="flex gap-x-3">
+                  <svg class="h-6 w-5 flex-none text-red-600" viewBox="0 0 20 20" fill="currentColor"
+                       aria-hidden="true">
+                    <path fill-rule="evenodd"
+                          d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                          clip-rule="evenodd"></path>
+                  </svg>
+                  Email Marketing
+                </li>
+                <li class="flex gap-x-3">
+                  <svg class="h-6 w-5 flex-none text-red-600" viewBox="0 0 20 20" fill="currentColor"
+                       aria-hidden="true">
+                    <path fill-rule="evenodd"
+                          d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                          clip-rule="evenodd"></path>
+                  </svg>
+                  SEO Optimization
+                </li>
+
+              </ul>
+              <p class="text-sm mt-6 text-gray-400"> Renew as low as $299/year,
+                And since you have a better understanding of your persona and the customer and the market
+                the content of the website is provided by you if not add 50$</p>
+            </div>
+            <a href="#" aria-describedby="tier-startup"
+               class="mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600 bg-red-600 text-white shadow-sm hover:bg-red-500">
+              Buy
+              plan</a>
+          </div>
+          <div
+            class="flex flex-col justify-between rounded-3xl bg-white p-8 ring-1 ring-gray-200 xl:p-10 lg:mt-8  lg:rounded-l-none">
+            <div>
+              <div class="flex items-center justify-between gap-x-4">
+                <h3 id="tier-enterprise" class="text-lg font-semibold leading-8 text-gray-900">Advanced 301 : Small
+                  Business</h3>
+              </div>
+              <p class="mt-4 text-sm leading-6 text-gray-600">Dedicated support and infrastructure for your small
+                business company.</p>
+              <p class="mt-6 flex items-baseline gap-x-1">
+                <span class="text-4xl font-bold tracking-tight text-gray-900">$4800</span>
+                <span class="text-sm font-semibold leading-6 text-gray-600">/ All taxes included</span>
+              </p>
+              <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-gray-600">
+                <li class="flex gap-x-3">
+                  <svg class="h-6 w-5 flex-none text-red-600" viewBox="0 0 20 20" fill="currentColor"
+                       aria-hidden="true">
+                    <path fill-rule="evenodd"
+                          d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                          clip-rule="evenodd"></path>
+                  </svg>
+                  <p class="text-red-700"> What in Sell 201</p>
+                </li>
+                <li class="flex gap-x-3">
+                  <svg class="h-6 w-5 flex-none text-red-600" viewBox="0 0 20 20" fill="currentColor"
+                       aria-hidden="true">
+                    <path fill-rule="evenodd"
+                          d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                          clip-rule="evenodd"></path>
+                  </svg>
+                  Advance Web application
+                </li>
+                <li class="flex gap-x-3">
+                  <svg class="h-6 w-5 flex-none text-red-600" viewBox="0 0 20 20" fill="currentColor"
+                       aria-hidden="true">
+                    <path fill-rule="evenodd"
+                          d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                          clip-rule="evenodd"></path>
+                  </svg>
+                  Blogue
+                </li>
+                <li class="flex gap-x-3">
+                  <svg class="h-6 w-5 flex-none text-red-600" viewBox="0 0 20 20" fill="currentColor"
+                       aria-hidden="true">
+                    <path fill-rule="evenodd"
+                          d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                          clip-rule="evenodd"></path>
+                  </svg>
+                  Social Media Management up to 4 platforms, creating post and generating text.
+                </li>
+                <li class="flex gap-x-3">
+                  <svg class="h-6 w-5 flex-none text-red-600" viewBox="0 0 20 20" fill="currentColor"
+                       aria-hidden="true">
+                    <path fill-rule="evenodd"
+                          d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                          clip-rule="evenodd"></path>
+                  </svg>
+                  Advanced analytics
+                </li>
+                <li class="flex gap-x-3">
+                  <svg class="h-6 w-5 flex-none text-red-600" viewBox="0 0 20 20" fill="currentColor"
+                       aria-hidden="true">
+                    <path fill-rule="evenodd"
+                          d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                          clip-rule="evenodd"></path>
+                  </svg>
+                  Dedicated support response time
+                </li>
+                <li class="flex gap-x-3">
+                  <svg class="h-6 w-5 flex-none text-red-600" viewBox="0 0 20 20" fill="currentColor"
+                       aria-hidden="true">
+                    <path fill-rule="evenodd"
+                          d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                          clip-rule="evenodd"></path>
+                  </svg>
+                  Email Marketing + email campaigns 2 a month
+                </li>
+
+              </ul>
+            </div>
+            <a href="#" aria-describedby="tier-enterprise"
+               class="mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600 text-red-600 ring-1 ring-inset ring-red-200 hover:ring-red-300">Buy
+              plan</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQs -->
+    <div
+      class="mx-auto max-w-2xl divide-y divide-gray-900/10 px-6 pb-8 sm:pb-24 sm:pt-12 lg:max-w-7xl lg:px-8 lg:pb-32">
+      <h2 class="text-2xl font-bold leading-10 tracking-tight text-gray-900">Frequently asked questions</h2>
+      <dl class="mt-10 space-y-8 divide-y divide-gray-900/10">
+        <div class="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
+          <dt class="text-base font-semibold leading-7 text-gray-900 lg:col-span-5">What's the best thing about
+            Switzerland?
+          </dt>
+          <dd class="mt-4 lg:col-span-7 lg:mt-0">
+            <p class="text-base leading-7 text-gray-600">I don't know, but the flag is a big plus. Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.</p>
+          </dd>
+        </div>
+        <div class="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
+          <dt class="text-base font-semibold leading-7 text-gray-900 lg:col-span-5">How do you make holy water?</dt>
+          <dd class="mt-4 lg:col-span-7 lg:mt-0">
+            <p class="text-base leading-7 text-gray-600">You boil the hell out of it. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Magnam aut tempora vitae odio inventore fuga aliquam nostrum quod porro.
+              Delectus quia facere id sequi expedita natus.</p>
+          </dd>
+        </div>
+        <div class="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
+          <dt class="text-base font-semibold leading-7 text-gray-900 lg:col-span-5">What do you call someone with no
+            body and no nose?
+          </dt>
+          <dd class="mt-4 lg:col-span-7 lg:mt-0">
+            <p class="text-base leading-7 text-gray-600">Nobody knows. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore
+              labore voluptatem.</p>
+          </dd>
+        </div>
+        <div class="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
+          <dt class="text-base font-semibold leading-7 text-gray-900 lg:col-span-5">Why do you never see elephants
+            hiding in trees?
+          </dt>
+          <dd class="mt-4 lg:col-span-7 lg:mt-0">
+            <p class="text-base leading-7 text-gray-600">Because they're so good at it. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.</p>
+          </dd>
+        </div>
+        <div class="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
+          <dt class="text-base font-semibold leading-7 text-gray-900 lg:col-span-5">Why can't you hear a pterodactyl go
+            to the bathroom?
+          </dt>
+          <dd class="mt-4 lg:col-span-7 lg:mt-0">
+            <p class="text-base leading-7 text-gray-600">Because the pee is silent. Lorem ipsum dolor sit amet,
+              consectetur adipisicing elit. Ipsam, quas voluptatibus ex culpa ipsum, aspernatur blanditiis fugiat ullam
+              magnam suscipit deserunt illum natus facilis atque vero consequatur! Quisquam, debitis error.</p>
+          </dd>
+        </div>
+        <div class="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
+          <dt class="text-base font-semibold leading-7 text-gray-900 lg:col-span-5">Why did the invisible man turn down
+            the job offer?
+          </dt>
+          <dd class="mt-4 lg:col-span-7 lg:mt-0">
+            <p class="text-base leading-7 text-gray-600">He couldn't see himself doing it. Lorem ipsum dolor sit, amet
+              consectetur adipisicing elit. Eveniet perspiciatis officiis corrupti tenetur. Temporibus ut voluptatibus,
+              perferendis sed unde rerum deserunt eius.</p>
+          </dd>
+        </div>
+
+      </dl>
+    </div>
+
+    <!-- CTA section -->
+    <div class="relative -z-10 mt-32 px-6 lg:px-8">
+      <div
+        class="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 transform-gpu justify-center overflow-hidden blur-3xl sm:bottom-0 sm:right-[calc(50%-6rem)] sm:top-auto sm:translate-y-0 sm:transform-gpu sm:justify-end"
+        aria-hidden="true">
+        <div class="aspect-[1108/632] w-[69.25rem] flex-none bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-25"
+             style="clip-path: polygon(73.6% 48.6%, 91.7% 88.5%, 100% 53.9%, 97.4% 18.1%, 92.5% 15.4%, 75.7% 36.3%, 55.3% 52.8%, 46.5% 50.9%, 45% 37.4%, 50.3% 13.1%, 21.3% 36.2%, 0.1% 0.1%, 5.4% 49.1%, 21.4% 36.4%, 58.9% 100%, 73.6% 48.6%)"></div>
+      </div>
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Boost your productivity.<br>commence
+          using
+          our services today.</h2>
+        <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600">.</p>
+        <div class="mt-10 flex items-center justify-center gap-x-6">
+          <a href="#"
+             class="rounded-md bg-red-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Get
+            started</a>
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Learn more <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div
+        class="absolute left-1/2 right-0 top-full -z-10 hidden -translate-y-1/2 transform-gpu overflow-hidden blur-3xl sm:block"
+        aria-hidden="true">
+        <div class="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
+             style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+      </div>
     </div>
   </div>
 
+  <!-- Footer -->
+  <div class="mx-auto mt-32 max-w-7xl px-6 lg:px-8">
+    <footer aria-labelledby="footer-heading" class="relative border-t border-gray-900/10 py-24 sm:mt-56 sm:py-32">
+      <h2 id="footer-heading" class="sr-only">Footer</h2>
+      <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+        <img class="h-7" src="https://tailwindui.com/img/logos/mark.svg?color=red&amp;shade=600" alt="Company name">
+        <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+          <div class="md:grid md:grid-cols-2 md:gap-8">
+            <div>
+              <h3 class="text-sm font-semibold leading-6 text-gray-900">Solutions</h3>
+              <ul role="list" class="mt-6 space-y-4">
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Hosting</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Data Services</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Uptime Monitoring</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Enterprise Services</a>
+                </li>
+
+              </ul>
+            </div>
+            <div class="mt-10 md:mt-0">
+              <h3 class="text-sm font-semibold leading-6 text-gray-900">Support</h3>
+              <ul role="list" class="mt-6 space-y-4">
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Pricing</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Documentation</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Guides</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">API Reference</a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+          <div class="md:grid md:grid-cols-2 md:gap-8">
+            <div>
+              <h3 class="text-sm font-semibold leading-6 text-gray-900">Company</h3>
+              <ul role="list" class="mt-6 space-y-4">
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">About</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Blog</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Jobs</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Press</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Partners</a>
+                </li>
+
+              </ul>
+            </div>
+            <div class="mt-10 md:mt-0">
+              <h3 class="text-sm font-semibold leading-6 text-gray-900">Legal</h3>
+              <ul role="list" class="mt-6 space-y-4">
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Claim</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Privacy</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Terms</a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
 
 
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+  window.ga = function () {
+    ga.q.push(arguments)
+  };
+  ga.q = [];
+  ga.l = +new Date;
+  ga('create', 'UA-XXXXX-Y', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'transport', 'beacon');
+  ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
+
+<div id="chat-root" style="z-index: 9999;position: relative;"></div>
+<script>
+  (function (w, d, s, o, f, js, fjs) {
+    w["Simple-Widget"] = o; w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
+    js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
+    js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);
+  }(window, document, "script", "w1", 'https://chat-widget-assets.s3.us-west-2.amazonaws.com/widget.js'));
+  w1("init",
+    {"popUpTimer":3000,"imageUrl":null,"chatHeight":"min(630px,70vh)","chatWidth":"371px","placeholder":"Type a message...","title":"Live Chat Professional","subtitle":"Typically Responds in 5 Seconds","widgetType":"bubble","targetElementId":"chat-root","stackId":"stack_de78cd7b-9709-4853-86fd-b42c3a1f4685","userId":"48127633-d2ad-497c-9be3-1fa3e502e5ea","colors":{"main":"#000000","userMessageBubble":"#000000"}}
+  );
+</script>
+
 </body>
 
 </html>
