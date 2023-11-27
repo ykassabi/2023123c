@@ -47,31 +47,21 @@
 <body>
 
 
-<div class="bg-blac k text-gray-100 shadow-lg" role="alert">
+<div class="bg-red-700 bg-fixed text-gray-100 shadow-lg" role="alert">
   <div
     class=" text-blue-900 align-middle md:pl-12 justify-around md:justify-start  md:space-x-8 font-extrabold flex md:max-w-7xl mx-auto">
 
-    <div class="flex space-y-1 p-2  rounded-md shadow-sm  ">
-      <a href="whatsapp://send?abid=+15144467081&text=Hi/Salut!">Message WhatsApp</a>
 
-    </div>
-
-    <div class="flex space-y-1 p-2  text-blue-900 shadow-sm ">
-      <a href="mailto: 123c.ca@proton.me" class="text-md button uppercase">
-        <svg class="flex-shrink-0 w-6 h-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none"
-             viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-        </svg>
-      </a>
+    <div class="flex space-y-1 p-2  text-gray-50 shadow-sm ">
+<p> PROMO : website Starting from $199 </p>
     </div>
 
   </div>
 </div>
 
-<div class="bg-gray-200">
+<div class="bg-gray-200 ">
   <!-- Header -->
-  <header x-data="{ open: false }" @keydown.window.escape="open = true" class="absolute inset-x-0 top-0 z-50">
+  <header x-data="{ open: false }" @keydown.window.escape="open = true" class="absolute inset-x-0 top-0 z-30">
     <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
       <div class="flex lg:flex-1">
         <a href="#" class="-m-1.5 p-1.5">
@@ -95,6 +85,15 @@
         <!--        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Features</a>-->
         <a href="#Prices" class="text-sm font-semibold leading-6 text-gray-900">Prices</a>
         <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Company</a>
+        <a href="mailto: 123c.ca@proton.me" class="text-sm font-semibold leading-6 text-gray-900">
+          <svg class="flex-shrink-0 w-6 h-6 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+               viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+        </a>
+        <a href="whatsapp://send?abid=+15144467081&text=Hi/Salut!" class="text-sm font-semibold leading-6 text-gray-900">
+          Message WhatsApp</a>
 
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -108,7 +107,7 @@
         class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
         @click.away="open = false">
         <div class="flex items-center justify-between">
-          <a href="#" class="-m-1.5 p-1.5">
+          <a href="/" class="-m-1.5 p-1.5">
             <span class="sr-only">123C</span>
             <img class="h-24 w-auto" src="https://123c-blog.s3-ca-central-1.amazonaws.com/logo.png" alt="logo 123c">
 
@@ -132,6 +131,14 @@
                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Prices</a>
               <a href="#"
                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Company</a>
+              <a href="mailto: 123c.ca@proton.me" class="text-md button uppercase">
+                <svg class="flex-shrink-0 w-6 h-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                     viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </a>
+              <a href="whatsapp://send?abid=+15144467081&text=Hi/Salut!">Message WhatsApp</a>
 
             </div>
             <!--            <div class="py-6">-->
